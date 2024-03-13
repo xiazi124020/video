@@ -12,5 +12,5 @@
 
 ■测试
 - python -m test
-- output:hello world.
+- output:hello,world.
 
