@@ -10,12 +10,17 @@ images.sort()  # Sort the images by name
 # Settings
 slide_duration = 5  # seconds per image
 fps = 24  # frames per second
+target_width = 1280
 
 # Create a clip for each image
 clips = []
 for image in images:
     img_path = os.path.join(image_folder, image)
-    img_clip = ImageClip(img_path).set_duration(slide_duration).crossfadein(1).crossfadeout(1)
+    img_clip = (ImageClip(img_path)
+                .resize(width=target_width)  # Resize image to target width
+                .set_duration(slide_duration)
+                .crossfadein(1)
+                .crossfadeout(1))
     clips.append(img_clip)
 
 # Concatenate all clips
