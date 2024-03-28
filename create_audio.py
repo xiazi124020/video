@@ -8,15 +8,14 @@ text = f"""
 tts = gTTS(text=text, lang='zh-cn')
 tts.save("output.mp3")
 
-# 加载MP3文件
-audio = AudioSegment.from_mp3("output.mp3")
+# # 加载MP3文件
+# audio = AudioSegment.from_mp3("output.mp3")
 
-# 改变语速，这里将速度提高为原来的1.3倍
-# 注意：100代表原速，小于100减速，大于100加速
-audio_fast = audio.speedup(playback_speed=1.3)
+# # 注意：100代表原速，小于100减速，大于100加速
+# audio_fast = audio.speedup(playback_speed=1)
 
-# 保存加速后的音频文件
-audio_fast.export("output_fast.mp3", format="mp3")
+# # 保存加速后的音频文件
+# audio_fast.export("output_fast.mp3", format="mp3")
 
-# 如果你想直接播放看看效果
-play(audio_fast)
+# # 如果你想直接播放看看效果
+# play(audio_fast)
